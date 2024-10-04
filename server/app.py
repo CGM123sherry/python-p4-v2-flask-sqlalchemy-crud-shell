@@ -3,7 +3,7 @@
 from flask import Flask
 from flask_migrate import Migrate
 
-from models import db
+from models import db, pet
 
 # create a Flask application instance 
 app = Flask(__name__)
@@ -19,6 +19,7 @@ migrate = Migrate(app, db)
 
 # initialize the Flask application to use the database
 db.init_app(app)
+
 
 
 if __name__ == '__main__':
